@@ -16,7 +16,8 @@ module.exports = {
     transform: {
         "^.+\\.(ts)?$": "ts-jest",
     },
-    testRegex: ["/test/.*\\.(test.js|test.ts)$"],
+    // testRegex: ["/test/.*\\.(test.js|test.ts)$"],
+    testRegex: ["/test/init/init.test.js"],
     moduleFileExtensions: ["ts", "js", "json"],
     snapshotResolver: "<rootDir>/scripts/snapshotResolver.js",
     watchPlugins: ["jest-watch-typeahead/filename", "jest-watch-typeahead/testname"],
