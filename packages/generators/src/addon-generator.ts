@@ -77,6 +77,11 @@ const addonGenerator = (
 
             this.props = await this.prompt(prompts);
 
+            const installers = this.utils.getAvailableInstallers();
+            if (installers.length === 1) {
+                return ([this.packageManager] = installers);
+            }
+
             // Prompt for the package manager of choice
             const defaultPackager = this.utils.getPackageManager();
             const { packager } = await List(
